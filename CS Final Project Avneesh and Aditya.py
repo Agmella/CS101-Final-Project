@@ -11,10 +11,10 @@ def find():
     c = Counter()
     wordfreq={}
     e2.delete("1.0",END)
-    string = open('PrideandPrejudice.txt').read()
+    string = open('https://rawgit.com/Agmella/CS101-Final-Project/master/PrideandPrejudice.txt').read()
     new_str = re.sub('[^a-zA-Z0-9\n\.]', ' ', string)
-    open('PrideandPrejudice.txt', 'w').write(new_str)   
-    with open('PrideandPrejudice.txt') as f:
+    open('https://rawgit.com/Agmella/CS101-Final-Project/master/PrideandPrejudice.txt', 'w').write(new_str)   
+    with open('https://rawgit.com/Agmella/CS101-Final-Project/master/PrideandPrejudice.txt') as f:
         for line in f:
             for word in re.findall(r'[\w]+', line.lower()):    #http://stackoverflow.com/questions/21852066/counting-word-frequency-and-making-a-dictionary-from-it
                 c += Counter(word)
@@ -22,9 +22,9 @@ def find():
     e2.insert("1.0",wordfreq)
     e4.insert("1.0",c)
 def analyse():
-    open('PrideandPrejudice.txt',"w").close()
+    open('https://rawgit.com/Agmella/CS101-Final-Project/master/PrideandPrejudice.txt',"w").close()
     text = e1.get("1.0", "end-1c")
-    with open("C:\Users\Aditya\Desktop\Python\PrideandPrejudice.txt","a") as f:
+    with open("https://rawgit.com/Agmella/CS101-Final-Project/master/PrideandPrejudice.txt","a") as f:
         f.write(text.encode('utf-8'))
     find()
 
